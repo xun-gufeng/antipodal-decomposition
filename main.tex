@@ -1,0 +1,249 @@
+\documentclass[9pt,twocolumn]{article}
+
+% ── Packages ──
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage{caption}
+\usepackage{xcolor}
+
+% ── PNAS-style formatting ──
+\setlength{\parindent}{12pt}
+\setlength{\parskip}{0pt}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+
+% ── Title ──
+\title{\textbf{Antipodal Complementarity in a 3$\times$3 Topological Partition of China's Climate: A Three-Contribution Decomposition}}
+
+\author{
+\textbf{Jinguo Ling}\textsuperscript{a}
+\\[6pt]
+\textsuperscript{a}Independent Researcher, China\\[3pt]
+ORCID: 0009-0009-1406-4551\\[3pt]
+\textsuperscript{*}To whom correspondence should be addressed. E-mail: gufengxun@gmail.com
+}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+% ── Classification & Keywords ──
+\noindent\textbf{Classification:} Physical Sciences / Earth, Atmospheric, and Planetary Sciences; Statistics
+
+\noindent\textbf{Keywords:} antipodal complementarity, discrete spatial partition, magic square, climate statistics, null model hierarchy
+
+\vspace{6pt}
+
+% ══════════════════════════════════════════
+% ABSTRACT (≤250 words)
+% ══════════════════════════════════════════
+\begin{abstract}
+A 3$\times$3 azimuthal partition centered on Luoyang (34.62$^\circ$N, 112.45$^\circ$E) divides China's land surface into nine sectors. When opposite sectors are paired at 180$^\circ$ azimuthal separation, their seasonal temperature amplitudes exhibit striking complementarity: CV ($\sigma/\mu$) of the four pair means is only 0.061. We decompose this antipodal specificity into three nested contributions. Using UDel v501 data (0.5$^\circ$, 1900--2017; 1961--1990 reference), \textit{Contribution 1} (latitude gradient, dominant): latitude explains 91.7\% of amplitude variance ($R^2 = 0.917$), yet predicts paired CV $= 0.013$---lower than observed 0.061, indicating non-latitude degradation. \textit{Contribution 2} (antipodal pairing, sufficient condition): among 105 possible pairing schemes, median CV decreases monotonically with antipodal count (0: 0.281, 1: 0.228, 2: 0.158, 4: 0.061). The specific pairing rule---known as the Luoshu (\u6d1b\u4e66) configuration in Chinese mathematical tradition and the unique 3$\times$3 normal magic square up to symmetry---ranks 1/105 (top 1.0\%). \textit{Contribution 3} (east--west asymmetry): palaces 3 and 7 at $\Delta\varphi \approx 0^\circ$ exhibit 2.03$^\circ$C amplitude difference, reflecting monsoon amplification versus elevation moderation (2.0$\times$, $p < 0.001$). A three-tiered null model confirms specificity ($p = 0.010$; rank 1/105). Results are robust across 18 sliding 30-year windows (meta-CV $= 0.030$), all 12 calendar months (NCEP ranks $\leq$6/105), and five NCEP climate variables (ranks 1--74), with complementarity tracking latitude dependence. The decomposition and null model provide general frameworks for testing discrete spatial partitions.
+\end{abstract}
+
+\vspace{6pt}
+
+% ══════════════════════════════════════════
+% SIGNIFICANCE STATEMENT (≤120 words)
+% ══════════════════════════════════════════
+\noindent\fbox{\parbox{0.95\linewidth}{
+\textbf{Significance}\\[3pt]
+Many spatial analyses partition continuous geographic fields into discrete regions, but few ask whether a specific partitioning rule carries detectable statistical structure. We show that the antipodal pairing rule of the unique 3$\times$3 magic square---the Luoshu configuration---optimally pairs China's seasonal temperature zones among all 105 possible pairings. We decompose this optimality into three contributions: a dominant latitude gradient, the antipodal pairing principle, and an east--west asymmetry from monsoon--elevation contrast. The decomposition framework and three-tiered null model hierarchy are general: they apply to any discrete spatial partition in any field, from climate zoning to epidemiological surveillance.
+}}
+
+\vspace{10pt}
+
+% ══════════════════════════════════════════
+% INTRODUCTION
+% ══════════════════════════════════════════
+\section*{Introduction}
+
+A 3$\times$3 azimuthal partition centered on a point divides the surrounding plane into nine sectors: a central region and eight outer sectors at 45$^\circ$ intervals. When opposite sectors are paired at 180$^\circ$ separation, the resulting four pairs define an antipodal pairing structure. This geometric architecture raises a statistical question: does this specific pairing carry detectable structure in a spatially varying field, beyond what arbitrary pairings would produce?
+
+This partitioning scheme is realized in the Luoshu (\u6d1b\u4e66) nine-palace diagram, a spatial framework from Chinese mathematical cosmology dating to the Han dynasty~(1, 2). The Luoshu is the unique 3$\times$3 normal magic square (up to rotations and reflections), with constant row, column, and diagonal sums of 15 and antipodal pairs summing to 10. Its mathematical uniqueness makes it a natural test case: among all possible pairing rules for eight azimuthal sectors, only one achieves complete 4/4 antipodal alignment. While numerological interpretations have been extensively discussed, empirical tests of its spatial claims remain rare. The ``Nine Palaces and Eight Winds'' framework in traditional Chinese medicine links palace positions to astronomical and meteorological observations~(3, 4), suggesting that the Luoshu structure encodes genuine spatial information rather than purely numerological content.
+
+This study poses a focused question: \textit{What are the distinct physical contributions underlying the Luoshu antipodal specificity in China's climate field?} Rather than treating specificity as a monolithic finding, we decompose it into three contributions: (1)~\textbf{Latitude gradient} (dominant): solar radiation drives a strong latitude dependence of seasonal temperature amplitude~(5), providing the primary north--south symmetry that makes antipodal complementarity possible. (2)~\textbf{Antipodal pairing} (sufficient condition): the specific pairing of palaces at 180$^\circ$ azimuthal separation enhances complementarity beyond what arbitrary pairing achieves, with CV decreasing monotonically as antipodal count increases. (3)~\textbf{East--west asymmetry} (deterministic increment): the 3$\leftrightarrow$7 pair, at virtually identical latitudes but with monsoon-amplified seasonal range in the east and elevation-moderated range in the west, provides a latitude-independent contribution that further reduces CV.
+
+This decomposition resolves a key puzzle: a pure-latitude model predicts \textit{better} complementarity (paired CV $= 0.013$) than the observed Luoshu CV (0.061). Non-latitude geographic factors degrade complementarity, yet Luoshu still ranks 1/105---the optimal pairing in complete enumeration. The three-contribution framework explains this: latitude provides the dominant gradient, antipodal pairing provides the structural principle that exploits this gradient, and the east--west asymmetry provides a deterministic increment that partially compensates for degradation.
+
+% ══════════════════════════════════════════
+% RESULTS
+% ══════════════════════════════════════════
+\section*{Results}
+
+\subsection*{Contribution 1: Latitude Gradient (Dominant)}
+
+The seasonal amplitude of surface air temperature is strongly determined by latitude. A linear regression of amplitude on latitude across the eight outer palaces yields $R^2 = 0.917$, confirming that latitude explains 91.7\% of the cross-palace amplitude variance (Fig.~2A). The pair means of the four Luoshu antipodal pairs are: 1$\leftrightarrow$9 $= 28.6^\circ$C, 2$\leftrightarrow$8 $= 25.9^\circ$C, 3$\leftrightarrow$7 $= 25.0^\circ$C, 4$\leftrightarrow$6 $= 28.7^\circ$C. The spread (range: 3.8$^\circ$C) reflects non-latitude geographic factors.
+
+The pure-latitude model predicts paired CV $= 0.013$, substantially \textit{lower} than the observed 0.061 ($\sim$4.6$\times$ ratio). Non-latitude factors significantly reduce complementarity. Palace 2 (SW) has the most suppressed amplitude (10.9$^\circ$C vs.\ latitude-predicted $\sim$17$^\circ$C): the Tibetan Plateau's high elevation ($>$4{,}000~m) moderates the seasonal temperature range year-round---elevated baseline temperatures in winter reduce the annual swing, analogous to the oceanic effect on coastal climates. Palace 9 (S, coastal) has elevated amplitude (16.9$^\circ$C), reflecting the maritime-influenced south where the warm-season peak adds to the latitude baseline. Together, these geographic perturbations account for the 4.6$\times$ CV degradation from the pure-latitude prediction.
+
+\subsection*{Contribution 2: Antipodal Pairing (Sufficient Condition)}
+
+Among all 105 possible pairing schemes, median CV decreases monotonically with antipodal count (Fig.~2B, Fig.~3A): 0 antipodal pairs: CV $= 0.281$ (60 schemes); 1: 0.228 (32); 2: 0.158 (12); 4 (Luoshu): 0.061 (1). Luoshu is the unique 4/4 antipodal scheme---the only complete realization of the Z$_2^2$ orbital decomposition.
+
+\textbf{Three-tiered null model confirmation} (Fig.~3B): Tier A (random pairing): $p = 0.010$; Tier B (label shuffling): $p = 0.010$; Tier C (exhaustive enumeration): rank 1/105 (top 1.0\%). At the resolution of 50{,}000 permutations, Tier A and B yield indistinguishable $p$-values, reflecting that the antipodal pairing signal dominates both tests. All three tiers confirm significance at $p \leq 0.010$. The hierarchy demonstrates that specificity increases with constraint: Tier A rules out ``random pairing suffices,'' Tier B rules out ``antipodal structure with arbitrary labels,'' and Tier C establishes optimality.
+
+\subsection*{Contribution 3: East--West Asymmetry (Deterministic Increment)}
+
+Palaces 3 and 7 lie at virtually identical latitudes (34.61$^\circ$N vs.\ 34.63$^\circ$N, $\Delta\varphi \approx 0^\circ$) yet exhibit a 2.03$^\circ$C amplitude difference (26.00 vs.\ 23.97$^\circ$C). This latitude-independent difference reflects an east--west asymmetry: palace 3 (North China Plain, monsoon-amplified) has larger seasonal amplitude, while palace 7 (northwestern interior, elevated) has reduced amplitude where the Loess Plateau and transition to the Tibetan Plateau moderate the seasonal range.
+
+Among 42 same-latitude schemes (mean $|\Delta\varphi| \in [17^\circ, 22^\circ]$; see \textit{Materials and Methods}), those containing 3$\leftrightarrow$7 ($n_1 = 6$) have median CV $= 0.084$ versus 0.167 without ($n_2 = 36$) (2.0$\times$, Mann--Whitney U test~(10), $p < 0.001$) (Fig.~2C). The 3$\leftrightarrow$7 contribution partially compensates for latitude degradation: while palaces 2 and 9 deviate from predictions (increasing CV), the 3$\leftrightarrow$7 pair provides a latitude-independent reduction.
+
+\subsection*{Temporal Robustness}
+
+Across 18 sliding 30-year windows (1901--1930 through 1986--2015), Luoshu ranks 1st out of 105 in 16 windows and 2nd in 2 windows (Fig.~4). The meta-CV of paired CVs is 0.030. The 3$\leftrightarrow$7 east--west difference is positive in all windows (range: 1.47--2.12$^\circ$C). A weak CV upward trend (slope $= +0.000037$/yr, $p = 0.031$) and 3$\leftrightarrow$7 declining trend (slope $= -0.0045^\circ$C/yr, $p = 0.006$) are consistent with global warming signals~(18): Arctic amplification reduces the north--south amplitude gradient, while faster warming in the elevated northwest reduces the east--west amplitude difference. Neither trend alters qualitative conclusions.
+
+\subsection*{Monthly and Multi-Variable Generality}
+
+The preceding analysis uses seasonal amplitude of mean temperature from UDel v501. We now test generality at monthly resolution and across multiple climate variables, using NCEP/NCAR reanalysis~(19) (1961--1990 reference; grid details in \textit{Materials and Methods}).
+
+\textbf{Monthly resolution.} For each calendar month, we compute palace-mean temperature and evaluate the Luoshu pairing rank among all 105 schemes. Because palace-mean absolute temperatures span both positive and negative values in winter, the CV ($\sigma/\mu$) of pair means becomes unstable when $\mu$ approaches zero; we therefore evaluate monthly generality by rank only (see \textit{SI Appendix, Monthly Complementarity}). All 12 months achieve rank $\leq$6/105 (Table~S3): summer months (May--July) rank 1--2, while winter months (November--January) rank 5--6. The winter rank degradation reflects the stronger N--S temperature gradient in winter, which creates more competitive alternative pairings. The mean rank of 2.9 confirms that antipodal complementarity operates continuously rather than emerging solely from the annual cycle.
+
+\textbf{Multi-variable extension.} Seasonal amplitude analysis across five NCEP variables reveals a clear gradient (Table~S4): TMAX (rank 1), TMEAN (rank 1), TMIN (rank 8), wind speed (rank 44), and total cloud cover (rank 74). The latitude--amplitude correlation tracks this gradient ($r = 0.989$ for TMEAN vs.\ $r = -0.643$ for cloud cover), consistent with Contribution~1: variables whose seasonal amplitude is strongly latitude-dependent exhibit stronger antipodal complementarity, while variables with weaker or negative latitude gradients show correspondingly weaker specificity. This gradient provides independent confirmation of the three-contribution framework---the latitude gradient is the primary driver, and the antipodal pairing principle exploits it proportionally.
+
+% ══════════════════════════════════════════
+% DISCUSSION
+% ══════════════════════════════════════════
+\section*{Discussion}
+
+\subsection*{The Three-Contribution Framework}
+
+The decomposition reveals a key structural property: the pure-latitude model predicts \textit{better} complementarity than observed (CV $= 0.013$ vs.\ 0.061, $\sim$4.6$\times$ ratio), yet Luoshu ranks 1/105. The degradation by non-latitude factors is a genuine physical signal, not noise---it reveals that Luoshu is a top-down decomposition imposing discrete antipodal structure on continuous geography. The central finding is that the antipodal pairing principle is \textbf{robust to} this degradation: it exploits the latitude gradient so effectively that it tolerates substantial non-latitude perturbation while still outperforming all alternatives. The framework generalizes: any discrete spatial framework partitioning a continuous field will exhibit a dominant gradient contribution, a structural contribution from the partitioning rule, and a residual contribution from geography-specific factors.
+
+\subsection*{Physical Basis and Parameter Efficiency}
+
+The Luoshu pattern emerges from the deterministic astronomical ground state: solar radiation drives the spatial distribution of seasonal amplitude~(5, 7). The latitude gradient (91.7\% of variance) provides primary N--S symmetry, while the east--west asymmetry adds the E--W dimension captured by 3$\leftrightarrow$7. The parameter efficiency comparison is instructive: Luoshu specifies 9 regions with 2 degrees of freedom (center point and central palace radius), whereas $k$-means with $k = 9$ has 18 free parameters. That Luoshu achieves rank 1/105 with minimal parametric freedom suggests its structural principle captures genuine spatial organization rather than overfitting.
+
+The central palace (5) encodes a gnomon constraint: for an 8-\textit{chi} gnomon, tan($h_\odot$) $= 5$ yields $\varphi \approx 34.83^\circ$N, within 0.21$^\circ$ of Luoyang, corroborated by the \textit{Zhoubi Suanjing}~(9) shadow-measurement tradition (see \textit{SI Appendix, Gnomon Constraint}). This historical convergence is noted as a matter of scholarly interest; it is independent of the statistical claims above.
+
+\subsection*{Methodological Implications}
+
+We propose the three-tiered null model hierarchy as a general framework for testing spatial structures. Single-level permutation tests cannot distinguish whether significance arises from structural principles or specific spatial assignments; the hierarchy resolves this ambiguity. Tier A (weakest constraint) rules out ``any pairing suffices.'' Tier B (moderate constraint) rules out ``antipodal structure with arbitrary labels.'' Tier C (strongest constraint) establishes optimality. This hierarchy is applicable to any spatial framework with discrete partitions.
+
+The three-contribution decomposition provides a diagnostic template: for any discrete partitioning scheme, one can ask (a) what dominant gradient makes the proposed structure possible, (b) what structural principle exploits this gradient, and (c) what residual factors enhance or degrade the prediction. This transforms the binary question ``is the structure significant?'' into the more informative question ``what are the distinct contributions to its specificity?''
+
+We further identify a methodological caveat: the EOF2 sign-reversal test, a seemingly natural diagnostic for antipodal coupling, is insufficient as a diagnostic for eight azimuthal sectors under continuous spatial gradients---both because eigenvector signs are mathematically arbitrary~(11) and because sign reversal is geometrically inevitable under monotonic gradients. Amplitude complementarity (CV) depends on the specific pairing rule and can differentiate structures, making it a valid diagnostic (see \textit{SI Appendix, EOF2 Sign-Reversal Test}).
+
+\subsection*{Limitations}
+
+First, while multi-variable analysis confirms that complementarity extends beyond mean temperature with a clear gradient (Table~S4), the number of tested variables remains limited; extending to precipitation, soil moisture, and upper-atmosphere fields would further test generality. Second, non-latitude geographic factors degrade complementarity, resulting in observed CV exceeding the latitude-only prediction; whether this degradation can be quantitatively attributed to specific geographic features remains open. Third, the causal direction of the east--west complementarity and the gnomon constraint cannot be determined from statistical analysis alone---the current evidence establishes convergence but cannot resolve causal direction. Fourth, the analysis is specific to the Luoshu-centered context; whether similar antipodal specificity holds for other continental-scale regions is a question for future comparative study.
+
+% ══════════════════════════════════════════
+% MATERIALS AND METHODS
+% ══════════════════════════════════════════
+\section*{Materials and Methods}
+
+\textbf{Data.} Primary: monthly mean surface air temperature from UDel v501 (0.5$^\circ$ resolution, 1900--2017)~(17). The 1961--1990 period serves as the reference climatology; all 0.5$^\circ$ grid points within China (15--55$^\circ$N, 70--145$^\circ$E) are used ($N \approx 12{,}000$). Validation and extension: NCEP/NCAR reanalysis~(19) (1961--1990 reference), including surface air temperature and wind speed on a 2.5$^\circ$$\times$2.5$^\circ$ latitude--longitude grid, and maximum and minimum 2-m temperature and total cloud cover on a T62 Gaussian grid ($\sim$1.9$^\circ$ resolution).
+
+\textbf{Palace assignment.} Center at (34.62$^\circ$N, 112.45$^\circ$E); central palace radius 2.0$^\circ$; eight outer palaces as azimuthal sectors of 45$^\circ$ width with cos(latitude) correction ensuring approximately equal-area sectors. Palace-level latitudes are arithmetic means of grid-point latitudes within each palace: 1: 48.28$^\circ$N, 2: 21.93$^\circ$N, 3: 34.61$^\circ$N, 4: 23.01$^\circ$N, 6: 47.71$^\circ$N, 7: 34.63$^\circ$N, 8: 46.59$^\circ$N, 9: 21.39$^\circ$N. See \textit{SI Appendix, Gnomon Constraint Derivation} for the astronomical basis of the central point.
+
+\textbf{Amplitude.} Seasonal amplitude is the full annual range (max $-$ min) of the palace-mean 12-month temperature cycle (``average-then-amplitude'' method).
+
+\textbf{Paired CV.} The coefficient of variation of the four pair means is computed as the population CV, $\mathrm{CV} = \sigma/\mu$, where $\sigma$ denotes the population standard deviation (denominator $N = 4$) and $\mu$ the arithmetic mean of the four pair means. This yields paired CV $= 0.061$ for the Luoshu scheme.
+
+\textbf{Three-contribution decomposition.} (a)~Latitude contribution: linear regression of amplitude on latitude, computing predicted paired CV (linear model: $R^2 = 0.917$; quadratic yields only $\Delta R^2 = 0.006$ with adjusted $R^2$ decrease, confirming overfitting with 8 data points). (b)~Antipodal count stratification: median CV by antipodal pair count across all 105 schemes. (c)~East--west effect: ``same-latitude schemes'' are defined as pairing schemes whose mean absolute inter-pair latitude difference $\langle|\Delta\varphi|\rangle$ falls within the Luoshu range of 17--22$^\circ$; among 42 such schemes (6 containing the 3$\leftrightarrow$7 pair, 36 without), Mann--Whitney U test~(10).
+
+\textbf{Three-tiered null model.} Tier A (random pairing): 50,000 Monte Carlo randomizations~(15). Tier B (label shuffling): 50,000 permutations~(15). Tier C (exhaustive enumeration): rank among all $(8-1)!! = 105$ possible pairing schemes.
+
+\textbf{Temporal robustness.} Eighteen 30-year sliding windows (1901--1930 through 1986--2015, every 5 years), following WMO practice~(16). See \textit{SI Appendix, Temporal Robustness} for full results.
+
+\textbf{Robustness checks.} Sensitivity to central point (five candidate cities; $p < 0.05$ for all, Luoyang optimal), central palace radius (1$^\circ$--5$^\circ$; stable), and equal-weighted versus area-weighted amplitudes (paired CV: 0.0611 vs.\ 0.0628, 2.7\% difference; 3$\leftrightarrow$7: 2.03$^\circ$C vs.\ 2.49$^\circ$C area-weighted, falsifying the inflation hypothesis). Monthly generality: for each calendar month, palace-mean temperature computed from NCEP data and Luoshu rank evaluated among all 105 schemes. Multi-variable generality: seasonal amplitude computed for each NCEP variable, with Luoshu rank and latitude--amplitude correlation evaluated. See \textit{SI Appendix, Robustness Checks, Monthly Complementarity, and Multi-Variable Complementarity}.
+
+\textbf{AI use disclosure.} During the preparation of this manuscript, the author used large language model-based assistants (Coze platform, underlying models including GPT-4o and Claude 3.5 Sonnet) for Python code generation and manuscript text editing. All AI-suggested code was independently validated against published reference datasets. All AI-suggested text was reviewed and revised by the author, who takes full responsibility for the published content.
+
+% ══════════════════════════════════════════
+% ACKNOWLEDGMENTS
+% ══════════════════════════════════════════
+\section*{Acknowledgments}
+
+This research received no external funding.
+
+% ══════════════════════════════════════════
+% AUTHOR CONTRIBUTIONS
+% ══════════════════════════════════════════
+\vspace{6pt}
+\noindent\textbf{Author Contributions:} J.L. designed research, performed research, analyzed data, and wrote the paper; AI tools assisted with code generation and text editing (see \textit{Materials and Methods}).
+
+\noindent\textbf{Competing Interest Statement:} The author declares no competing interest.
+
+\noindent\textbf{Preprint Server:} A preprint of this manuscript was deposited on Zenodo (DOI: 10.5281/zenodo.20477230) on May 31, 2026.
+
+% ══════════════════════════════════════════
+% DATA AVAILABILITY
+% ══════════════════════════════════════════
+\noindent\textbf{Data Availability:} UDel v501 data are publicly available from NOAA PSL (\url{https://psl.noaa.gov/data/gridded/data.UDel_AirT_Precip.html}). NCEP/NCAR reanalysis data are publicly available from NOAA PSL (\url{https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html}). All analysis code is available at \url{https://github.com/xun-gufeng/antipodal-decomposition}.
+
+% ══════════════════════════════════════════
+% REFERENCES
+% ══════════════════════════════════════════
+\vspace{10pt}
+\begin{thebibliography}{18}
+
+\bibitem{1} J.~Needham, \textit{Science and Civilisation in China}, Vol.~3: \textit{Mathematics and the Sciences of the Heavens and the Earth} (Cambridge University Press, Cambridge, 1959).
+
+\bibitem{2} A.~T.~P.~So \textit{et al.}, Luo Shu: Ancient Chinese magic square on linear algebra. \textit{SAGE Open} \textbf{5}, 1--9 (2015).
+
+\bibitem{3} M.~Wang, W.~Qian, X.~Wang, Study on the formation, characteristics and application of the ``Nine Palaces and Eight Winds'' TCM space-time integration view. \textit{J.~Nanjing Univ.~Tradit.~Chin.~Med.} \textbf{41}, 1140--1147 (2025).
+
+\bibitem{4} L.~Liu, C.~Liu, Y.~Fan, Y.~Huang, The ``Eight Winds'' concept in Han dynasty divination and the \textit{Lingshu: Jiugong Bafeng}. \textit{J.~Chengdu Univ.~Tradit.~Chin.~Med.} \textbf{49}, 109--113 (2026).
+
+\bibitem{5} D.~L.~Hartmann, \textit{Global Physical Climatology}, 3rd ed. (Elsevier, Amsterdam, 2026).
+
+\bibitem{6} H.~E.~Beck \textit{et al.}, High-resolution (1~km) K\"oppen--Geiger maps for 1901--2099 based on constrained CMIP6 projections. \textit{Sci.~Data} \textbf{10}, 724 (2023).
+
+\bibitem{7} Z.~Chen \textit{et al.}, Emergent constrained projections of mean and extreme warming in China. \textit{Geophys.~Res.~Lett.} \textbf{50}, e2022GL102124 (2023).
+
+\bibitem{8} B.~Wang, C.~Jin, J.~Liu, Understanding future change of global monsoons projected by CMIP6 models. \textit{J.~Climate} \textbf{33}, 6471--6489 (2020).
+
+\bibitem{9} C.~Cullen, \textit{Astronomy and Mathematics in Ancient China: The Zhou Bi Suan Jing} (Cambridge University Press, Cambridge, 1996).
+
+\bibitem{10} H.~B.~Mann, D.~R.~Whitney, On a test of whether one of two random variables is stochastically larger than the other. \textit{Ann.~Math.~Stat.} \textbf{18}, 50--60 (1947).
+
+\bibitem{11} G.~R.~North, T.~L.~Bell, R.~F.~Cahalan, F.~J.~Moeng, Sampling errors in the estimation of empirical orthogonal functions. \textit{Mon.~Weather Rev.} \textbf{110}, 699--706 (1982).
+
+\bibitem{12} H.~Duan \textit{et al.}, Climate classification for major cities in China using cluster analysis. \textit{Atmosphere} \textbf{15}, 741 (2024).
+
+\bibitem{13} H.~Akaike, A new look at the statistical model identification. \textit{IEEE Trans.~Autom.~Control} \textbf{19}, 716--723 (1974).
+
+\bibitem{14} F.~E.~Buskop \textit{et al.}, Beyond the floodplain: Integrating probabilities and storylines to explore regional uncertain direct and cascading climate risks in multi-sectoral systems. \textit{Earth's Future} \textbf{13}, e2025EF006499 (2025).
+
+\bibitem{15} P.~I.~Good, \textit{Permutation Tests: A Practical Guide to Resampling Methods for Testing Hypotheses}, 2nd ed. (Springer, New York, 2000).
+
+\bibitem{16} A.~Arguez, R.~S.~Vose, The definition of the standard WMO climate normal. \textit{Bull.~Am.~Meteorol.~Soc.} \textbf{92}, 699--704 (2011).
+
+\bibitem{17} M.~New, D.~Lister, M.~Hulme, I.~Makin, A high-resolution data set of surface climate over global land areas. \textit{Clim.~Res.} \textbf{21}, 1--25 (2002).
+
+\bibitem{18} Y.~Sun \textit{et al.}, Understanding human influence on climate change in China. \textit{Natl.~Sci.~Rev.} \textbf{9}(3), nwab113 (2022). DOI: 10.1093/nsr/nwab113.
+
+\bibitem{19} E.~Kalnay \textit{et al.}, The NCEP/NCAR 40-year reanalysis project. \textit{Bull.~Am.~Meteorol.~Soc.} \textbf{77}, 437--471 (1996).
+
+\end{thebibliography}
+
+% ══════════════════════════════════════════
+% FIGURE LEGENDS
+% ══════════════════════════════════════════
+\newpage
+\section*{Figure Legends}
+
+\noindent\textbf{Fig.~1.} The Luoshu spatial framework. (A) The Luoshu nine-palace magic square, with cells colored by antipodal pairs: blue (1$\leftrightarrow$9, N$\leftrightarrow$S), red (2$\leftrightarrow$8, SW$\leftrightarrow$NE), green (3$\leftrightarrow$7, E$\leftrightarrow$W), orange (4$\leftrightarrow$6, SE$\leftrightarrow$NW), and purple (5, center). Dashed lines connect antipodal pairs whose sums equal 10. (B) Azimuthal palace assignment centered on Luoyang (34.62$^\circ$N, 112.45$^\circ$E), showing eight equal-angle sectors with seasonal amplitude annotations. Pair means and overall CV $= 0.061$ are shown below.
+
+\vspace{6pt}
+\noindent\textbf{Fig.~2.} Three-contribution decomposition of Luoshu specificity. (A)~Contribution~1: Seasonal amplitude vs.\ latitude across the eight outer palaces, with antipodal pairs connected by colored lines. The linear fit ($R^2 = 0.917$) confirms latitude dominance. The latitude-only model predicts CV $= 0.013$, $\sim$4.6$\times$ lower than observed 0.061, indicating degradation by non-latitude factors. (B)~Contribution~2: Median paired CV decreases monotonically with antipodal pair count (0: 0.281, 1: 0.228, 2: 0.158, 4: 0.061). Luoshu is the unique 4/4 antipodal scheme, ranking 1/105. (C)~Contribution~3: Among 42 same-latitude schemes, those containing the 3$\leftrightarrow$7 pair have median CV $= 0.084$ versus 0.167 without (2.0$\times$, Mann--Whitney $p < 0.001$). The 3$\leftrightarrow$7 pair at $\Delta\varphi \approx 0^\circ$ exhibits a 2.03$^\circ$C amplitude difference attributable to monsoon amplification (east) versus elevation moderation (west).
+
+\vspace{6pt}
+\noindent\textbf{Fig.~3.} Exhaustive pairing and null model hierarchy. (A) Distribution of paired CV across all 105 possible pairing schemes, colored by antipodal count. Luoshu (CV $= 0.061$, red dashed line) is the optimal scheme. The distribution shows clear stratification by antipodal count. (B) Three-tiered null model hierarchy. Tier~A (random pairing): $p = 0.010$; Tier~B (label shuffling): $p = 0.010$; Tier~C (exhaustive enumeration): rank 1/105 (top 1.0\%). All tiers confirm significance at $\alpha = 0.05$ (orange dashed line).
+
+\vspace{6pt}
+\noindent\textbf{Fig.~4.} Temporal robustness across 18 sliding 30-year windows (1901--1930 through 1986--2015). (A) Paired CV across windows (red circles), with rank annotations (1 or 2). Mean $= 0.063$; meta-CV $= 0.030$. Luoshu ranks 1st in 16/18 windows and 2nd in 2/18 windows. (B) The 3$\leftrightarrow$7 east--west amplitude difference (green squares) across windows, with declining trend ($-0.045^\circ$C/decade, $p = 0.006$) consistent with global warming reducing the east--west amplitude difference. Mean $= 1.87^\circ$C; positive in all windows.
+
+\end{document}
