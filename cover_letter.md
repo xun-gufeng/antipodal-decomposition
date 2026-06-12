@@ -26,8 +26,6 @@ I also suggest the following NAS members with relevant expertise:
 - Prof. Inez Y. Fung (NAS member, elected 2001) — University of California, Berkeley — climate modeling, atmospheric biogeochemistry, data analysis
 - Prof. Jonathan T. Overpeck (NAS member, elected 2024) — University of Michigan — climate dynamics, monsoon dynamics, paleoclimatology
 
-Note: This is a Direct Submission; no NAS member sponsor is required.
-
 Suggested reviewers with relevant expertise:
 
 1. Prof. Michael Ghil (UCLA / ENS Paris) — ghil@atmos.ucla.edu — Climate statistics, dynamical systems, algebraic topology
