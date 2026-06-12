@@ -130,7 +130,7 @@ The two layers reinforce each other: even setting aside the general arbitrarines
 % ══════════════════════════════════════════
 \subsection*{7. Cross-Dataset Validation}
 
-The main analysis uses UDel v501 (0.5$^\circ$, 1900--2017). To assess dataset dependence, we replicate the palace-level amplitude analysis using the CUG-CMA CHDT dataset~(20) (2.5$^\circ$ resolution, 1880--2020; reference period 1961--1990). Despite the different spatial resolution and temporal coverage, the CUG-CMA results are consistent with UDel: the Luoshu pairing achieves rank 1/105 (CV $= 0.066$ vs.\ UDel 0.061), and the inter-annual amplitude series are strongly correlated (Spearman $\rho = 0.712$, $p < 0.0001$). Both datasets independently place the Luoshu pairing at the top rank, confirming that the result is not an artifact of a specific gridded dataset.
+The main analysis uses UDel v501 (0.5$^\circ$, 1900--2017). To assess dataset dependence, we replicate the palace-level amplitude analysis using the CUG-CMA CHDT dataset~(20) (2.5$^\circ$ resolution, 1880--2020; reference period 1961--1990). Despite the different spatial resolution and temporal coverage, the CUG-CMA results are consistent with UDel: the Luoshu pairing achieves rank 1/105 (CV $= 0.066$ vs.\ UDel 0.061), and the inter-annual amplitude series are strongly correlated (Spearman $\rho = 0.712$, $p < 0.0001$). Both datasets independently place the Luoshu pairing at the top rank, demonstrating that the result is not an artifact of a specific gridded dataset.
 
 % ══════════════════════════════════════════
 \subsection*{8. Robustness Checks}
@@ -141,10 +141,10 @@ The main analysis uses UDel v501 (0.5$^\circ$, 1900--2017). To assess dataset de
 
 \textbf{Equal-weighted vs.\ area-weighted amplitudes.} The nine palaces vary substantially in area: the largest outer palace (7, W) has 2,449 grid points versus the smallest (1, N) with 832 points (2.9$\times$ ratio). Area-weighting increases rather than decreases the 3$\leftrightarrow$7 contrast (paired CV: 0.0611 vs.\ 0.0628, 2.7\% difference; 3$\leftrightarrow$7: 2.03$^\circ$C vs.\ 2.49$^\circ$C area-weighted), falsifying the hypothesis that area inequality artificially inflates the east--west signal.
 
-\textbf{Linear vs.\ quadratic regression.} With only eight data points, a quadratic model ($\text{amp} \sim \text{lat} + \text{lat}^2$) yields $R^2 = 0.924$ ($\Delta R^2 = 0.006$) at the cost of an additional parameter; the adjusted $R^2$ decreases from 0.904 (linear) to 0.893 (quadratic), confirming overfitting~(13). The quadratic model also introduces a physically implausible curvature in the latitude--amplitude relationship over the observed range.
+\textbf{Linear vs.\ quadratic regression.} With only eight data points, a quadratic model ($\text{amp} \sim \text{lat} + \text{lat}^2$) yields $R^2 = 0.924$ ($\Delta R^2 = 0.006$) at the cost of an additional parameter; the adjusted $R^2$ decreases from 0.904 (linear) to 0.893 (quadratic), indicating overfitting~(13). The quadratic model also introduces a physically implausible curvature in the latitude--amplitude relationship over the observed range.
 
 % ══════════════════════════════════════════
-\subsection*{8. Comparison with Data-Driven Climate Regionalization}
+\subsection*{9. Comparison with Data-Driven Climate Regionalization}
 
 A natural question is how the Luoshu framework compares with data-driven regionalization methods such as $k$-means clustering, hierarchical clustering, or rotated EOF analysis~(6, 12, 13). The comparison must account for parameter efficiency: data-driven methods with many free parameters will trivially achieve better fit, just as a polynomial of sufficient degree can interpolate any set of points. Luoshu specifies 9 regions with effectively 2 degrees of freedom (the center point and central palace radius; sector angles and pairing structure are fixed by the Luoshu rule), whereas $k$-means with $k = 9$ has 18 free parameters (2D centroids).
 
@@ -153,7 +153,7 @@ The fair comparison is not fit (where data-driven methods win by construction) b
 Buskop \textit{et al.}~(14) employed sub-catchment partitioning in compound-event analysis; we extend this discrete-partitioning principle from physically defined regions (catchments) to culturally encoded regions (Luoshu palaces), demonstrating that the latter carries detectable statistical structure.
 
 % ══════════════════════════════════════════
-\subsection*{9. Monthly Complementarity}
+\subsection*{10. Monthly Complementarity}
 
 \textbf{Table S3.} Luoshu pairing rank among 105 schemes for each calendar month (NCEP/NCAR reanalysis surface air temperature, 1961--1990 reference period).
 
@@ -182,7 +182,7 @@ Dec & 6 & Strong N--S gradient \\
 \noindent All 12 months achieve rank $\leq$6/105 (mean $= 2.9$). We evaluate monthly generality by rank rather than by the absolute CV value, for the following reason. The monthly analysis uses palace-mean absolute temperature (not seasonal amplitude); when the mean of the four pair means approaches 0$^\circ$C (as occurs in transitional and winter months), CV $= \sigma/\mu$ becomes unstable. However, each of the eight outer palaces appears exactly once in every pairing scheme, so the sum $S = \sum_i T_i$ is identical across all 105 schemes, making $\mu = S/8$ of the four pair means a constant independent of the pairing rule. The CV ranking is therefore equivalent to the $\sigma$ ranking and remains valid. Summer months (May--July) rank 1--2, reflecting a weaker meridional temperature gradient that makes alternative pairings less competitive. Winter months (November--January) rank 5--6, reflecting the stronger gradient. The seasonal modulation of rank is consistent with Contribution~1 (latitude gradient): when the latitude gradient is strong, more pairing schemes can partially exploit it, increasing competition for the top rank; when the gradient is weak, Luoshu's antipodal structure becomes more uniquely advantageous.
 
 % ══════════════════════════════════════════
-\subsection*{10. Multi-Variable Complementarity}
+\subsection*{11. Multi-Variable Complementarity}
 
 \textbf{Table S4.} Luoshu pairing rank among 105 schemes for five NCEP/NCAR reanalysis variables (1961--1990 reference period, seasonal amplitude metric).
 
