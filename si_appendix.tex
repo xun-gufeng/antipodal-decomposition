@@ -70,7 +70,7 @@ While the numeral 5 admits multiple interpretations in Luoshu scholarship (Five 
 
 The canonical Nine Provinces mapping, documented in the \textit{Wuxing Dayi} (Sui dynasty) and traceable to the \textit{Chunqiuwei$\cdot$Wenyaogou} (Han dynasty), assigns each palace to a province: 1 (N) $\to$ Ji, 2 (SW) $\to$ Jing, 3 (E) $\to$ Qing, 4 (SE) $\to$ Xu, 5 (center) $\to$ Yu, 6 (NW) $\to$ Yong, 7 (W) $\to$ Liang, 8 (NE) $\to$ Yan, 9 (S) $\to$ Yang. The \textit{Shiji} records that the Duke of Zhou established Luoyang as ``the center of the world, where tribute routes from the four directions are equal in distance.'' The He Zun inscription (early Western Zhou, $\sim$1040 BC) records ``residing in this central state'' (\u5b85\u5179\u4e2d\u570b), the earliest known occurrence of \textit{Zhongguo}, referring to the Luoyang region.
 
-Only 4/9 provinces achieve full directional correspondence---defined as the provincial capital falling within the corresponding azimuthal sector. The four matching positions---center (5, Yu Province = Henan/Luoyang), north (1, Ji Province = Hebei), east (3, Qing Province = Shandong), northwest (6, Yong Province = Shaanxi)---are structural key points anchoring the discrete framework. The remaining five positions are boundary positions: Jing (palace 2, SW) extends into the south-central region due to the Tibetan Plateau displacing the SW sector; Yang (palace 9, S) occupies the southeast coast rather than pure south. This structure-versus-boundary distinction confirms that Luoshu is a top-down decomposition (imposing discrete antipodal structure on geography) rather than a bottom-up classification: the structural positions are determined by the astronomical coordinate system, while the boundary positions require geographic adaptation.
+Only 4/9 provinces achieve full directional correspondence---defined as the provincial capital falling within the corresponding azimuthal sector. The four matching positions---center (5, Yu Province = Henan/Luoyang), north (1, Ji Province = Hebei), east (3, Qing Province = Shandong), northwest (6, Yong Province = Shaanxi)---are structural key points anchoring the discrete framework. The remaining five positions are boundary positions: Jing (palace 2, SW) extends into the south-central region due to the Tibetan Plateau displacing the SW sector; Yang (palace 9, S) occupies the southeast coast rather than pure south. This structure-versus-boundary distinction supports the interpretation that Luoshu is a top-down decomposition (imposing discrete antipodal structure on geography) rather than a bottom-up classification: the structural positions are determined by the astronomical coordinate system, while the boundary positions require geographic adaptation.
 
 % ══════════════════════════════════════════
 \subsection*{4. Central Palace Anchoring}
@@ -128,7 +128,12 @@ A natural diagnostic for antipodal coupling is checking whether EOF patterns exh
 The two layers reinforce each other: even setting aside the general arbitrariness of EOF signs, the specific geometry of azimuthal sectors guarantees sign reversal under any monotonic gradient. Sign reversal therefore cannot differentiate Luoshu-specific antipodal coupling from geometric triviality. By contrast, amplitude complementarity (CV) depends on the specific pairing rule and can differentiate structures---making it a valid diagnostic. This distinction---valid (CV complementarity) versus insufficient (sign reversal)---is a methodological contribution applicable to any spatial framework that partitions a continuous field into discrete sectors.
 
 % ══════════════════════════════════════════
-\subsection*{7. Robustness Checks}
+\subsection*{7. Cross-Dataset Validation}
+
+The main analysis uses UDel v501 (0.5$^\circ$, 1900--2017). To assess dataset dependence, we replicate the palace-level amplitude analysis using the CUG-CMA CHDT dataset~(20) (2.5$^\circ$ resolution, 1880--2020; reference period 1961--1990). Despite the different spatial resolution and temporal coverage, the CUG-CMA results are consistent with UDel: the Luoshu pairing achieves rank 1/105 (CV $= 0.066$ vs.\ UDel 0.061), and the inter-annual amplitude series are strongly correlated (Spearman $\rho = 0.712$, $p < 0.0001$). Both datasets independently place the Luoshu pairing at the top rank, confirming that the result is not an artifact of a specific gridded dataset.
+
+% ══════════════════════════════════════════
+\subsection*{8. Robustness Checks}
 
 \textbf{Sensitivity to central point.} Five candidate cities tested: Luoyang, Xi'an, Kaifeng, Jingyang, Beijing. Luoyang yields the lowest paired CV; all centers achieve $p < 0.05$ in Tier A and Tier B.
 
@@ -196,7 +201,7 @@ Total cloud cover & 0.313 & 74 & $-0.643$ & 0.085 \\
 \end{tabular}
 
 \vspace{6pt}
-\noindent The gradient from rank 1 (TMAX, TMEAN) through rank 8 (TMIN) to rank 74 (cloud cover) tracks the latitude--amplitude correlation: temperature variables have strongly positive $r$ (amplitude increases with latitude, driven by solar radiation), wind speed has weakly negative $r$ (no systematic latitude dependence), and cloud cover has moderately negative $r$ (cloud fraction decreases with latitude over China). This gradient confirms Contribution~1: the latitude gradient is the primary physical driver of antipodal complementarity, and variables whose seasonal amplitude is less latitude-dependent exhibit correspondingly weaker specificity.
+\noindent The gradient from rank 1 (TMAX, TMEAN) through rank 8 (TMIN) to rank 74 (cloud cover) tracks the latitude--amplitude correlation: temperature variables have strongly positive $r$ (amplitude increases with latitude, driven by solar radiation), wind speed has weakly negative $r$ (no systematic latitude dependence), and cloud cover has moderately negative $r$ (cloud fraction decreases with latitude over China). This gradient supports Contribution~1: the latitude gradient is the primary physical driver of antipodal complementarity, and variables whose seasonal amplitude is less latitude-dependent exhibit correspondingly weaker specificity.
 
 The TMIN rank (8) being higher than TMAX (1) reflects the greater complexity of minimum temperature, which is more strongly influenced by local factors (cloud cover, humidity, urban heat islands) than maximum temperature, which is primarily radiation-driven. The wind speed intermediate rank (44) reflects the mixed signal: while wind speed amplitude has some latitude structure, it is dominated by the monsoon--topography interaction that varies across the nine palaces in ways not aligned with the antipodal structure.
 
@@ -210,6 +215,7 @@ The TMIN rank (8) being higher than TMAX (1) reflects the greater complexity of 
 \bibitem{13} H.~Akaike, \textit{IEEE Trans.~Autom.~Control} \textbf{19}, 716--723 (1974).
 \bibitem{14} F.~E.~Buskop \textit{et al.}, \textit{Earth's Future} \textbf{13}, e2025EF006499 (2025).
 \bibitem{19} E.~Kalnay \textit{et al.}, \textit{Bull.~Am.~Meteorol.~Soc.} \textbf{77}, 437--471 (1996).
+\bibitem{20} X.~Zheng, Y.~Ren, G.~Ren, P.~Zhang \textit{et al.}, A century-long China homogenized daily surface air temperature dataset (CUG-CMA CHDT). \textit{Sci.~Data} \textbf{11}, 1045 (2024). DOI: 10.1038/s41597-024-03758-3.
 \end{thebibliography}
 
 \end{document}
